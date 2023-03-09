@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- klinik_ai.obat form view -->
+    <record id="klinik_ai_obat_view_form" model="ir.ui.view">
+        <field name="name">klinik_ai.obat.view.form</field>
+        <field name="model">klinik_ai.obat</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="harga"/>
+                        <field name="harga_jual"/>
+                        <field name="satuan"/>
+                        <field name="stok"/>
+                        <field name="img" widget="image"/>
+                        <field name="supplier_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record><!-- klinik_ai.obat tree view -->
+    <record id="klinik_ai_obat_view_tree" model="ir.ui.view">
+        <field name="name">klinik_ai.obat.view.tree</field>
+        <field name="model">klinik_ai.obat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="harga"/>
+                <field name="harga_jual"/>
+                <field name="satuan"/>
+                <field name="stok"/>
+                <field name="img" widget="image"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- klinik_ai.obat action window -->
+    <record  id="klinik_ai_obat_action" model="ir.actions.act_window">
+        <field name="name">obat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">klinik_ai.obat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem  id="klinik_ai_obat_menu_act" 
+               name="obat" 
+               parent="klinik_ai_apotek_menu_categ"
+               action="klinik_ai_obat_action" 
+               sequence="10"/> 
+
+</odoo>

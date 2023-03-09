@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- klinik_ai.supplier tree view -->
+    <record id="klinik_ai_supplier_view_tree" model="ir.ui.view">
+        <field name="name">klinik_ai.supplier.view.tree</field>
+        <field name="model">klinik_ai.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+             <field name="name"/> 
+             <field name="alamat"/>  
+             <field name="no_hp"/>
+           </tree>
+        </field>
+    </record>
+        <!-- klinik_ai.supplier action window -->
+    <record id="klinik_ai_supplier_action" model="ir.actions.act_window">
+            <field name="name">supplier</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">klinik_ai.supplier</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="klinik_ai_supplier_menu_act" 
+          name="supplier" 
+          parent="klinik_ai_apotek_menu_categ" 
+          action="klinik_ai_supplier_action" 
+          sequence="20"/> 
+
+</odoo>

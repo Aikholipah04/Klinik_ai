@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>   
+    <!-- klinik_ai.rekammedis tree view -->
+    <record id="klinik_ai_rekammedis_view_tree" model="ir.ui.view">
+        <field name="name">REKAM MEDIS</field>
+        <field name="model">klinik_ai.rekammedis</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="pasien_id"/>
+                <field name="tanggal_daftar"/>
+                <field name="penyakit"/>
+                <field name="obat"/>    
+            </tree>
+        </field>
+    </record>
+
+    <!-- klinik_ai.rekammedis form view -->
+    <record id="klinik_ai_rekammedis_view_form" model="ir.ui.view">
+        <field name="name">FORM REKAM MEDIS</field>
+        <field name="model">klinik_ai.rekammedis</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group name="name" string="PASIEN">                        
+                        <field name="pasien_id"/>    
+                    </group>
+                    <group string="Rekam Medis">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="tanggal_daftar"/>
+                        <field name="penyakit"/>
+                        <field name="obat"/>                    
+                    </group>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+     
+    <record id="klinik_ai_rekammedis_action" model="ir.actions.act_window">
+        <field name="name">REKAM MEDIS</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">klinik_ai.rekammedis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="klinik_ai_rekammedis_menu_act" 
+              name="REKAM MEDIS" 
+              parent="klinik_ai_menu_root" 
+              action="klinik_ai_rekammedis_action" 
+              sequence="26"/>
+ 
+
+</odoo>

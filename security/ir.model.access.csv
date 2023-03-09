@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_klinik_ai_dokter,access.klinik_ai.dokter,model_klinik_ai_dokter,,1,1,1,1
+access_klinik_ai_pasien,access.klinik_ai.pasien,model_klinik_ai_pasien,,1,1,1,1
+access_klinik_ai_obat,access.klinik_ai.obat,model_klinik_ai_obat,,1,1,1,1
+access_klinik_ai_penjualan,access.klinik_ai.penjualan,model_klinik_ai_penjualan,,1,1,1,1
+access_klinik_ai_rekammedis,access.klinik_ai.rekammedis,model_klinik_ai_rekammedis,,1,1,1,1
+access_klinik_ai_supplier,access.klinik_ai.supplier,model_klinik_ai_supplier,,1,1,1,1
+access_klinik_ai_penjualandetail,access.klinik_ai.penjualandetail,model_klinik_ai_penjualandetail,,1,1,1,1
